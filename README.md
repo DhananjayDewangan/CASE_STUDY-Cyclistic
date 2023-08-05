@@ -1,6 +1,7 @@
 # CASE_STUDY-Cyclistic
 Cyclistic Bike Share Analysis
 
+
 Hello there, My name is Dhananjay!
 This is my first Capstone Project: Cyclistic Bike-Share provided by the Google x Coursera platform to Analyze the Data and make the project for portfolio.
 By using MS Excel, MY SQL, R Programming and Tableau to conduct a Comprehensive analysis on a Case Study. It is a great approach to gain insights from different angles. 
@@ -37,4 +38,5 @@ License: The data has been made available by Motivate International Inc. under t
 
 Contact:
 LinkedIn - https://www.linkedin.com/in/dhananjay-dewangan-236796268/
+
 EMAIL - ddewangan1806@gmail.com
