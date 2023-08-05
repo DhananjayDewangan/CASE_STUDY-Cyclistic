@@ -23,18 +23,30 @@ Three questions will guide the future marketing program:
 Moreno has assigned you the first question to answer: How do annual members and casual riders use Cyclistic bikes differently?
 
 #### PREPARE:
-Open your spreadsheet and create a column called “ride_length.” Calculate the length of each ride by subtracting the column “started_at” from the column “ended_at” (for example, =D2-C2) and format as HH:MM:SS using Format > Cells > Time > 37:30:55.
+1. Downloading the data and storing it appropriately.
+2. Identifying how it’s organized.
+3. Sorting and filtering the data.
+4. Determining the credibility of the data.
 
-Create a column called “day_of_week,” and calculate the day of the week that each ride started using the “WEEKDAY” command (for example, =WEEKDAY(C2,1)) in each file. Format as General or as a number with no decimals, noting that 1 = Sunday and 7 = Saturday.
+#### PROCESS:
+1. Checking the data for errors.
+2. Removing Duplicates.
+3. Removing blank columns to ensure data integrity.
+4. Sorting and Filtering the Data
+5. Creating the Custom column for ride_length and then calculating the length of each ride by subtracting the column “started_at” from the column “ended_at” (for example, =D2-C2) and format as HH:MM:SS using Format > Cells > Time > 37:30:55.subtracting the column “started_at” from the column “ended_at” (for example, =D2-C2) and format as HH:MM:SS using Format > Cells > Time > 37:30:55.
+6. Creating the column for day_of_week and calculating the day of the week that each ride started using the "WEEKDAY" command for example, =WEEKDAY(C2,1)) in each file. Format as General or as a number with no decimals, noting that 1 = Sunday and 7 = Saturday.
 
-Analysis: Explain what kind of analysis you've done or intend to do with the project. If Excel analysis is part of it, you can briefly describe the purpose and methodology here.
-
-Results: If you have obtained results from your analysis, you can summarize them in this section. You could also mention if you have exported any data specifically for Excel analysis.
-
-Excel File: Create an Excel file (e.g., "analysis.xlsx") that includes any relevant data or results for analysis. This could be graphs, tables, or any other data that you've generated during your project.
-
-Linking to Excel File: In your README, you can provide a direct link to the Excel file you've created. You can use relative links if the Excel file is stored in the repository. Here's an example Markdown link: [Download Excel Analysis](./analysis.xlsx)
-
-Acknowledgments: If you've used third-party libraries, resources, or received help from others, acknowledge them in this section.
-
-License: Specify the license under which your project is released. This tells others what they can and cannot do with your project.
+#### Analysis: 
+1. Combining all the 12 tables into one by using power query in excel. And make a connection so that later it becomes easy to calculate.
+2. Aggregating the data so it becomes useful and accessible.
+3. Creating a Pivot Table from a Connection, which was created earlier
+4. Creating a New Sheet to perform a calculations:-
+         ● Calculate the mean of ride_length
+         ● calculate the max ride_length
+         ● Calculate the mode of day_of_week
+         ● Calculate the average ride_length for members and casual riders. Try rows = member_casual; Values = Average
+            of ride_length.
+         ● Calculate the average ride_length for users by day_of_week. Try columns = day_of_week; Rows = member_casual; Values = Average of ride_length.
+         ● Calculate the number of rides for users by day_of_week by adding Count of trip_id to Values.
+5. Identifying trends and relationships.
+8. Creating a Dashboard and Exporting summary file in PNG.
