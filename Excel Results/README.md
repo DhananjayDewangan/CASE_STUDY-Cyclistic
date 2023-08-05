@@ -1,6 +1,6 @@
 # Excel Analysis
 
-### Case Study: How Does a Bike-Share Navigate Speedy Success?
+#### Case Study: How Does a Bike-Share Navigate Speedy Success?
 
 Project Description : Cyclistic Bike-Share is a fictional company, we will perform many real-world tasks of a junior data analyst. we will work for a company, Cyclistic, and meet different characters and team members. In order to answer the key business questions
 
@@ -14,7 +14,7 @@ Installation:
   a. Launch Excel, open each file, and choose to Save As an Excel Workbook file. Put it in the subfolder you created for .XLS files.
   b. Open each .CSV file in Google Sheets and save it to the appropriate subfolder.
 
-### ASK :
+#### ASK :
 Three questions will guide the future marketing program:
 1. How do annual members and casual riders use Cyclistic bikes differently?
 2. Why would casual riders buy Cyclistic annual memberships?
@@ -22,7 +22,7 @@ Three questions will guide the future marketing program:
 
 Moreno has assigned you the first question to answer: How do annual members and casual riders use Cyclistic bikes differently?
 
-### PREPARE:
+#### PREPARE:
 Open your spreadsheet and create a column called “ride_length.” Calculate the length of each ride by subtracting the column “started_at” from the column “ended_at” (for example, =D2-C2) and format as HH:MM:SS using Format > Cells > Time > 37:30:55.
 
 Create a column called “day_of_week,” and calculate the day of the week that each ride started using the “WEEKDAY” command (for example, =WEEKDAY(C2,1)) in each file. Format as General or as a number with no decimals, noting that 1 = Sunday and 7 = Saturday.
