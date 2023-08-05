@@ -1,8 +1,8 @@
-# Excel Analysis: From Dirty to Clean
-
-Project Description : Cyclistic Bike-Share is a fictional company, we will perform many real-world tasks of a junior data analyst. we will work for a company, Cyclistic, and meet different characters and team members. In order to answer the key business questions
+# Excel Analysis
 
 ### Case Study: How Does a Bike-Share Navigate Speedy Success?
+
+Project Description : Cyclistic Bike-Share is a fictional company, we will perform many real-world tasks of a junior data analyst. we will work for a company, Cyclistic, and meet different characters and team members. In order to answer the key business questions
 
 Installation: 
 1. Download the previous 12 months of Cyclistic trip data.click here:(https://divvy-tripdata.s3.amazonaws.com/index.html)
