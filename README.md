@@ -8,7 +8,8 @@ By using MS Excel, MY SQL, R Programming and Tableau to conduct a Comprehensive 
 Project Title: Cyclistic Bike-Share
 
 Case Study: How Does a Bike-Share Navigate Speedy Success?
-![image](https://github.com/DhananjayDewangan/CASE_STUDY-Cyclistic/assets/126963677/391ab811-d55c-4dfa-8556-8efe4315197a)
+![image](https://github.com/DhananjayDewangan/CASE_STUDY-Cyclistic/assets/126963677/a1f255ce-7032-4d2e-90d5-a98abd250461)
+
 
 Introduction :
 Welcome to the Cyclistic bike-share analysis case study! In this case study, I will perform many real-world tasks of a junior data analyst. I am working for a fictional company, Cyclistic, and shows the different characters and team members. In order to answer the key business questions, I will follow the steps of the data analysis process: ask, prepare, process, analyze, share, and act. Along the way, the Case Study Roadmap tables — including guiding questions and key tasks — will help me staying on the right path.
