@@ -1,3 +1,4 @@
+# SQL Analysis
 # Cyclistic Bike-Share Analysis Project
 
 Welcome to the Cyclistic Bike-Share Analysis project repository! In this project, I took a deep dive into real-world data analysis using SQL to uncover insights into rider behavior and design a marketing strategy for Cyclistic, a visionary bike-share company in Chicago.
