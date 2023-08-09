@@ -1,0 +1,383 @@
+---
+title: "Cyclistic_Bike_Share_Analysis"
+author: "Dhananjay Dewangan"
+date: "2023-08-08"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<div align="center">![Cyclistic_Logo](D:\bike share data/logo.png)
+
+
+## Case Study: How Does a Bike-Share Navigate Speedy Success?
+
+
+<div align="left">
+
+
+### Introduction
+
+
+Welcome to the Cyclistic bike-share analysis case study! In this case study, I am going to perform many real-world tasks of a junior data analyst, for a fictional company, Cyclistic, and meeting the different characters and team members. In order to answer the key business questions, I am following the steps of the data analysis process: ask, prepare, process, analyze, share, and act.
+
+
+### Scenario
+
+
+I am a junior data analyst working in the marketing analyst team at Cyclistic, a bike-share company in Chicago. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, my team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, my team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve my recommendations, so they must be backed up with compelling data insights and professional data visualizations.
+
+
+
+#### Characters and teams
+
+
+● Cyclistic: A bike-share program that features more than 5,800 bicycles and 600 docking stations. Cyclistic sets itself apart by also offering reclining bikes, hand tricycles, and cargo bikes, making bike-share more inclusive to people with disabilities and riders who can’t use a standard two-wheeled bike. The majority of riders opt for traditional bikes; about 8% of riders use the assistive options. Cyclistic users are more likely to ride for leisure, but about 30% use them to commute to work each day.
+
+● Lily Moreno: The director of marketing and your manager. Moreno is responsible for the development of campaigns and initiatives to promote the bike-share program. These may include email, social media, and other channels.
+
+● Cyclistic marketing analytics team: A team of data analysts who are responsible for collecting, analyzing, and reporting data that helps guide Cyclistic marketing strategy. You joined this team six months ago and have been busy learning about Cyclistic’s mission and business goals — as well as how you, as a junior data analyst, can help Cyclistic achieve them.
+
+● Cyclistic executive team: The notoriously detail-oriented executive team will decide whether to approve the recommended marketing program.
+
+### About the company
+
+
+In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet of 5,824 bicycles that are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime.
+
+
+Until now, Cyclistic’s marketing strategy relied on building general awareness and appealing to broad consumer segments. One approach that helped make these things possible was the flexibility of its pricing plans: single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members.
+
+
+Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Although the pricing flexibility helps Cyclistic attract more customers, Moreno believes that maximizing the number of annual members will be key to future growth. Rather than creating a marketing campaign that targets all-new customers, Moreno believes there is a very good chance to convert casual riders into members. She notes that casual riders are already aware of the Cyclistic program and have chosen Cyclistic for their mobility needs.
+
+
+**Moreno has set a clear goal** : Design marketing strategies aimed at converting casual riders into annual members. In order to do that, however, the marketing analyst team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics. Moreno and her team are interested in analyzing the Cyclistic historical bike trip data to identify trends.
+
+<div align="left">
+
+## Ask
+
+Three questions will guide the future marketing program:
+
+1. How do annual members and casual riders use Cyclistic bikes differently?
+
+2. Why would casual riders buy Cyclistic annual memberships?
+
+3. How can Cyclistic use digital media to influence casual riders to become members?
+
+Moreno has assigned me the first question to answer: How do annual members and casual riders use Cyclistic bikes differently?
+
+
+
+**Guiding questions** 
+
+1. What is the problem you are trying to solve? 
+
+2. How can your insights drive business decisions?
+
+
+
+**Key tasks**
+
+1. Identify the business task 
+
+2. Consider key stakeholders
+
+
+
+**Deliverable**
+
+1. A clear statement of the business task
+
+<div align="left">
+
+## Prepare
+
+We use Cyclistic’s historical trip data to analyze and identify trends.for downloading the previous 12 months of Cyclistic trip data [Click_Here](https://divvy-tripdata.s3.amazonaws.com/index.html). Note: The datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study, the datasets are appropriate and enable us to answer the business questions.
+
+
+The data has been made available by Motivate International Inc. under this [license](https://ride.divvybikes.com/data-license-agreement). This is public data that you can use to explore how different customer types are using Cyclistic bikes.
+
+**Guiding questions** 
+
+1. Where is your data located? 
+2. How is the data organized? 
+3. Are there issues with bias or credibility in this data?
+4. How are you addressing licensing, privacy, security, and accessibility? 
+5. How did you verify the data’s integrity? 
+6. How does it help you answer your question? 
+7. Are there any problems with the data?
+
+
+**Key tasks**
+
+1. Download data and store it appropriately. 
+
+2. Identify how it’s organized. 
+
+3. Sort and filter the data.
+
+4. Determine the credibility of the data.
+
+
+**Deliverable**
+
+1. A description of all data sources used
+
+
+We used the data of 12 months of the year 2022_divy_bike_trip_data provided by the Cyclistic Company
+
+
+
+This step will prepare the data for analysis. All the csv files will be merged into one file to improve workflow
+
+
+```{r loading tidyverse package}
+# Loading Tidyverse Package
+library(tidyverse)
+```
+
+### Uploading the Dataset
+
+```{r uploading data,}
+
+data1 <- read_csv("202201_trip_data.csv")
+data2 <- read_csv("202202_trip_data.csv")
+data3 <- read_csv("202203_trip_data.csv")
+data4 <- read_csv("202204_trip_data.csv")
+data5 <- read_csv("202205_trip_data.csv")
+data6 <- read_csv("202206_trip_data.csv")
+data7 <- read_csv("202207_trip_data.csv")
+data8 <- read_csv("202208_trip_data.csv")
+data9 <- read_csv("202209_trip_data.csv")
+data10 <- read_csv("202210_trip_data.csv")
+data11 <- read_csv("202211_trip_data.csv")
+data12 <- read_csv("202212_trip_data.csv")
+
+```
+
+**Joining all the data sets into one big data sets***
+
+```{r}
+# Joining all the data sets into one big data sets
+
+all_data <- bind_rows(data1,data2,data3,data4,data5,data6,data7,data8,data9,data10,data11,data12)
+```
+
+**Removing Lat and lng**
+
+```{r}
+# Removing Lat and lng
+all_data <- all_data %>% select(-c(start_lat, start_lng, end_lat, end_lng))
+```
+
+
+### Data Cleaning
+
+**Removing Duplicates**
+```{r}
+all_data_clean<- all_data[!duplicated(all_data$ride_id), ]
+print(paste("Removed", nrow(all_data) - nrow(all_data_clean), "duplicated rows"))
+```
+
+
+## Analyze
+
+Now the data is processed appropriately and has been ready for analysis.
+
+
+
+*Inspecting the Data*
+
+```{r}
+# colnames
+colnames(all_data_clean)  #List of column names
+```
+
+
+```{r}
+# nrow
+nrow(all_data_clean)  #How many rows are in data frame?
+```
+
+
+```{r}
+# dim
+dim(all_data_clean)  #Dimensions of the data frame?
+```
+
+
+```{r}
+# head
+head(all_data_clean)  #See the first 6 rows of data frame.  Also tail(all_trips)
+```
+
+
+```{r}
+# str
+str(all_data_clean)  #See list of columns and data types (numeric, character, etc)
+```
+
+
+```{r}
+# summary
+summary(all_data_clean)  #Statistical summary of data. Mainly for numerics
+```
+
+
+
+**Descriptive analysis on ride_length (all figures in seconds)**
+
+``` {r}
+# mean
+mean(all_data_clean$ride_length) 
+```
+
+
+```{r}
+# median
+median(all_data_clean$ride_length) 
+```
+
+
+```{r}
+# max
+max(all_data_clean$ride_length) 
+```
+
+
+```{r}
+# min
+min(all_data_clean$ride_length)
+```
+
+
+### Casuals vs members
+
+How much of the data is about members and how much is about casuals?
+
+```{r}
+all_data_clean %>% 
+    group_by(member_casual) %>% 
+    summarise(count = length(ride_id),
+              '%' = (length(ride_id) / nrow(all_data_clean)) * 100)
+```
+
+
+```{r}
+# This function help to resize the plots
+fig <- function(width, heigth){options(repr.plot.width = width, repr.plot.height = heigth)}
+```
+
+
+```{r}
+fig(16,8)
+ggplot(all_data_clean, aes(member_casual, fill=member_casual)) +
+    geom_bar() +
+    labs(x="Casuals x Members", title="Chart 01 - Casuals x Members distribution")
+```
+
+As we can see on the member x casual table, members have a bigger proportion of the dataset, composing ~59%, ~19% bigger than the count of casual riders.
+
+
+**Compare members and casual users**
+
+``` {r}
+aggregate(all_data_clean$ride_length ~ all_data_clean$member_casual, FUN = mean)
+aggregate(all_data_clean$ride_length ~ all_data_clean$member_casual, FUN = median)
+aggregate(all_data_clean$ride_length ~ all_data_clean$member_casual, FUN = max)
+aggregate(all_data_clean$ride_length ~ all_data_clean$member_casual, FUN = min)
+```
+
+
+### Weekday
+
+How much of the data is distributed by weekday?
+
+
+```{r}
+all_data_clean %>%
+    group_by(day_of_week) %>% 
+    summarise(count = length(ride_id),
+              '%' = (length(ride_id) / nrow(all_data_clean)) * 100,
+              'members_p' = (sum(member_casual == "member") / length(ride_id)) * 100,
+              'casual_p' = (sum(member_casual == "casual") / length(ride_id)) * 100,
+              'Member x Casual Perc Difer' = members_p - casual_p)
+```
+
+
+```{r}
+ggplot(all_data_clean, aes(day_of_week, fill=member_casual)) +
+    geom_bar() +
+    labs(x="Weekdady", title="Chart 03 - Distribution by weekday") +
+    coord_flip()
+```
+
+It's interesting to see:
+
+The biggest volume of data is on the weekend.
+Saturday has the biggest data points.
+Members may have the biggest volume of data, besides on saturday. On this weekday, casual take place as having most data points.
+Weekends have the biggest volume of casual, starting on friday, a ~20% increase.
+
+
+### Rideable type
+
+```{r}
+all_data_clean %>%
+    group_by(rideable_type) %>% 
+    summarise(count = length(ride_id),
+          '%' = (length(ride_id) / nrow(all_data_clean)) * 100,
+          'members_p' = (sum(member_casual == "member") / length(ride_id)) * 100,
+          'casual_p' = (sum(member_casual == "casual") / length(ride_id)) * 100,
+          'member_casual_perc_difer' = members_p - casual_p)
+```
+
+
+```{r}
+ggplot(all_data_clean, aes(rideable_type, fill=member_casual)) +
+    labs(x="Rideable type", title="Chart 07 - Distribution of types of bikes") +
+    geom_bar() +
+    coord_flip()
+```
+
+
+It's important to note that:
+
+Docked bikes have the biggest volume of rides, but this can be that the company may have more docked bikes.
+Members have a bigger preference for classic bikes, 56% more.
+Also for electric bikes.
+
+### Share
+
+The Analysis phase is done and we got key insights from the analyis.
+
+The Key finding are :
+
+1. Members have the biggest proportion of the dataset, ~19% bigger thand casuals.
+2. Members take more rides throughout the week vs casual users
+3. Casual riders take less trips/rides but for longer durations of time vs members
+4. In weekend the Casual riders used the most but in workdays the members used it most.
+5. Majority of the people prefer classic bicycle may be ease of use.
+
+**Conclusion**
+1. Members use the bikes for fixed activities, one of those is going to work.
+2. Bikes are used for recreation on the weekends.
+
+### Act
+
+The act phase would be done by the marketing team of the company. The main takeaway will be the top three recommendations for the marketing.
+
+**Recomendations**
+1. Giving offers to the casual riders in order to subscribe the membership of the company.
+2. Giving discounts to the subscribers so that they can use for it long rides.
+3. Establish more stations with charging facility in the city for bikes so the people can opt for electric bicycles, without any hesitation this can decrease the load of traditional classic bicycle.
+
+
+
+<div align="center">****Thank You*****
